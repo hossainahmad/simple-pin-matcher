@@ -27,3 +27,19 @@ document.getElementById('calc-key-pad').addEventListener('click', function(event
         calcInput.value = newNumber;
     }
 });
+
+function verifyPin(){
+    const pin = document.getElementById('display-input').value;
+    const typedNumbers = document.getElementById('typed-numbers-display').value;
+    const successMessage  = document.getElementById('matched');
+    const failMessage = document.getElementById('not-matched');
+
+    if(pin == typedNumbers){
+        successMessage.style.display = 'block';
+        failMessage.style.display = 'none';
+    }
+    else{
+        failMessage.style.display = 'block';
+        successMessage.style.display = 'none';
+    }
+}
